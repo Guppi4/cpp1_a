@@ -21,7 +21,7 @@ namespace ariel
      int col=a;
      char s1=c;
      char s2=d;
-     std::string s;
+     string s;
      
         
 

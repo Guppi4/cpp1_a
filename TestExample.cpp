@@ -11,11 +11,10 @@
 
 #include "doctest.h"
 #include "mat.hpp"
-using namespace ariel;
-
 #include <string>
 #include <algorithm>
 using namespace std;
+using namespace ariel;
 
 /**
  * Returns the input string without the whitespace characters: space, newline and tab.
@@ -31,16 +30,13 @@ string nospaces(string input) {
 
 
 TEST_CASE("Good input") {
-	
-	CHECK(nospaces(mat(9, 7, '@', '-')) == nospaces("@@@@@@@@@\n
-													 @-------@\n
-													 @-@@@@@-@\n
-													 @-@---@-@\n
-													 @-@@@@@-@\n
-													 @-------@\n
-													 @@@@@@@@@"));
-	
-	
+	CHECK(nospaces(mat(9, 7, '@', '-')) == nospaces("@@@@@@@@@\n"
+													 "@-------@\n"
+													 "@-@@@@@-@\n"
+													 "@-@---@-@\n"
+													 "@-@@@@@-@\n"
+													 "@-------@\n"
+													 "@@@@@@@@@"));
 	/* Add more test here */
 }
 

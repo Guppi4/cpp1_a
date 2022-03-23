@@ -1,4 +1,3 @@
-
 /**
  * An example of how to write unit tests.
  * Use this as a basis to build a more complete Test.cpp file.
@@ -7,7 +6,8 @@
  *
  * AUTHORS: <Kirill Perevalov>
  * 
- * Date: 2021-02
+ *    Date: 2021-03-23
+ *
  */
 
 #include "doctest.h"
@@ -34,7 +34,7 @@ string nospaces(string input)
 }
 TEST_CASE("Good input")
 {
-    //1
+   //1
     CHECK(nospaces(mat(11, 7, '@', '-')) == nospaces("@@@@@@@@@@@\n@---------@\n@-@@@@@@@-@\n@-@-----@-@\n@-@@@@@@@-@\n@---------@\n@@@@@@@@@@@"));
     //2
     CHECK(nospaces(mat(13, 11, '@', '-')) == nospaces("@@@@@@@@@@@@@\n@-----------@\n@-@@@@@@@@@-@\n@-@-------@-@\n@-@-@@@@@-@-@\n@-@-@---@-@-@\n@-@-@@@@@-@-@\n@-@-------@-@\n@-@@@@@@@@@-@\n@-----------@\n@@@@@@@@@@@@@"));
@@ -54,35 +54,30 @@ TEST_CASE("Good input")
     CHECK(nospaces(mat(7, 1, '#', '@')) == nospaces("#######"));
     //10
     CHECK(nospaces(mat(9, 1, '(', '-')) == nospaces("((((((((("));
-    
-                                                
-                                                 
-                                                           
- 
 
 }
 TEST_CASE("Bad input")
 {
     //1
-    CHECK_THROWS(mat(0, 0, '@', '-'));
+    CHECK_THROWS(mat(0, 9, '@', '-'));
     //2
-    CHECK_THROWS(mat(0, 7, '@', '-'));
+    CHECK_THROWS(mat(0, 0, '@', '-'));
     //3
-    CHECK_THROWS(mat(3, 0, '@', '-'));
+    CHECK_THROWS(mat(5, 0, '@', '-'));
     //4
-    CHECK_THROWS(mat(-3, 7, '@', '-'));
+    CHECK_THROWS(mat(-5, 7, '@', '-'));
     //5
-    CHECK_THROWS(mat(7, -1, '@', '-'));
+    CHECK_THROWS(mat(7, -3, '@', '-'));
     //6
-    CHECK_THROWS(mat(-3, -7, '@', '-'));
+    CHECK_THROWS(mat(-1, -7, '@', '-'));
     //7
     CHECK_THROWS(mat(2, 2, '@', '-'));
     //8
     CHECK_THROWS(mat(4, 7, '@', '-'));
     //9
-    CHECK_THROWS(mat(7, 4, '@', '-'));
+    CHECK_THROWS(mat(9, 4, '@', '-'));
     //10
     CHECK_THROWS(mat(2, 3, '@', '@'));
-    
- 
+   
+   
 }
