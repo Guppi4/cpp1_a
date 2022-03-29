@@ -65,7 +65,7 @@ TEST_CASE("Bad input")
     //3
     CHECK_THROWS(mat(5, 0, '@', '-'));
     //4
-    CHECK_THROWS(mat(-5, 7, '@', '-'));
+    CHECK_THROWS(mat(-5, 7, '@', '-'));//negative
     //5
     CHECK_THROWS(mat(7, -3, '@', '-'));
     //6
